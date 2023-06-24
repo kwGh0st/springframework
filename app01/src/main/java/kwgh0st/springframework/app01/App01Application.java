@@ -13,13 +13,11 @@ public class App01Application {
 
 		var context = new AnnotationConfigApplicationContext(App01Configuration.class);
 
-		System.out.println(context.getBean("name"));
+		System.out.println("personWithQualifier - " + context.getBean("personWithQualifier"));
 
-		System.out.println(context.getBean("age"));
+		System.out.println("Primary Person - " + context.getBean(Person.class));
 
-		System.out.println(context.getBean("person"));
-
-		System.out.println(context.getBean("address"));
+		System.out.println("Primary address - " + context.getBean(Address.class));
 
 	}
 
