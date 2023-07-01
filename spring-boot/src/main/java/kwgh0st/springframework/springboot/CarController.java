@@ -14,7 +14,9 @@ public class CarController {
     public List<Car> retrieveAllCars() {
         return Arrays.asList(
                         new Car(1, "BMW", "e46"),
-                        new Car(2, "Chevrolet", "Cruze")
+                        new Car(2, "Chevrolet", "Cruze"),
+                        new Car(3, "Opel", "Astra"),
+                        new Car(4, "Skoda", "Superb")
         );
     }
 }
