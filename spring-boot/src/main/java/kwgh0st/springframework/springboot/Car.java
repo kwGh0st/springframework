@@ -26,6 +26,18 @@ public class Car {
         return carModel;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setCarBand(String carBand) {
+        this.carBand = carBand;
+    }
+
+    public void setCarModel(String carModel) {
+        this.carModel = carModel;
+    }
+
     @Override
     public String toString() {
         return "Car{" +

@@ -18,6 +18,9 @@ public class CarsJdbcCommandLineRunner implements CommandLineRunner {
             carsJdbcRepository.insert(car);
         }
 
-        carsJdbcRepository.deleteById(2);
+        carsJdbcRepository.deleteById(1);
+
+        System.out.println(carsJdbcRepository.findById(2));
+        System.out.println(carsJdbcRepository.findById(3));
     }
 }
