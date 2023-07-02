@@ -13,13 +13,13 @@ public class PersonsJpaCommandLineRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        for (Person person : controller.retrieveAllPersons()) {
-            repository.insert(person);
-        }
-
-        repository.deleteById(1);
-
-        System.out.println(repository.findById(2));
-        System.out.println(repository.findById(3));
+//        for (Person person : controller.retrieveAllPersons()) {
+//            repository.insert(person);
+//        }
+//
+//        repository.deleteById(1);
+//
+//        System.out.println(repository.findById(2));
+//        System.out.println(repository.findById(3));
     }
 }

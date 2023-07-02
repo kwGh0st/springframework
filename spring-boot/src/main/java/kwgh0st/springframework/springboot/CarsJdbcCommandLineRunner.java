@@ -14,13 +14,13 @@ public class CarsJdbcCommandLineRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        for (Car car : controller.retrieveAllCars()) {
-            carsJdbcRepository.insert(car);
-        }
-
-        carsJdbcRepository.deleteById(1);
-
-        System.out.println(carsJdbcRepository.findById(2));
-        System.out.println(carsJdbcRepository.findById(3));
+//        for (Car car : controller.retrieveAllCars()) {
+//            carsJdbcRepository.insert(car);
+//        }
+//
+//        carsJdbcRepository.deleteById(1);
+//
+//        System.out.println(carsJdbcRepository.findById(2));
+//        System.out.println(carsJdbcRepository.findById(3));
     }
 }
