@@ -9,9 +9,15 @@ public class CarsJdbcCommandLineRunner implements CommandLineRunner {
 
     @Autowired
     private CarsJdbcRepository carsJdbcRepository;
+    @Autowired
+    private CarController controller;
 
     @Override
     public void run(String... args) throws Exception {
-        carsJdbcRepository.insert();
+        for (Car car : controller.retrieveAllCars()) {
+            carsJdbcRepository.insert(car);
+        }
+
+        carsJdbcRepository.deleteById(2);
     }
 }

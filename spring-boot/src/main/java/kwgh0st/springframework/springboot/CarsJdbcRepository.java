@@ -12,10 +12,18 @@ public class CarsJdbcRepository {
     private static String INSERT_QUERY =
             """
             insert into cars (id, carBand, carModel)
-            values (1, 'BMW', 'e90')
+            values (?, ?, ?)
+            """;
+    private static String DELETE_QUERY =
+            """
+            delete from cars where id=?
             """;
 
-    public void insert() {
-        jdbcTemplate.update(INSERT_QUERY);
+    public void insert(Car car) {
+        jdbcTemplate.update(INSERT_QUERY, car.getId(), car.getCarBand(), car.getCarModel());
+    }
+
+    public void deleteById(long id) {
+        jdbcTemplate.update(DELETE_QUERY, id);
     }
 }

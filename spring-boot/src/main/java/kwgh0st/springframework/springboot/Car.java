@@ -1,9 +1,12 @@
 package kwgh0st.springframework.springboot;
 
 public class Car {
-    private final long id;
-    private final String carBand;
-    private final String carModel;
+    private long id;
+    private String carBand;
+    private String carModel;
+
+    public Car() {
+    }
 
     public Car(long id, String carBand, String carModel) {
         this.id = id;
@@ -21,5 +24,14 @@ public class Car {
 
     public String getCarModel() {
         return carModel;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", carBand='" + carBand + '\'' +
+                ", carModel='" + carModel + '\'' +
+                '}';
     }
 }
