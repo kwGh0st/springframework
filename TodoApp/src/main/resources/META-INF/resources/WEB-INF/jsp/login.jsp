@@ -11,9 +11,9 @@
 </head>
 <body>
   <div class="signup">
-    <form action="/" method="POST">
+    <form method="post">
         <h1>Login</h1>
-        <input class="top" name="uName" type="username" placeholder="Username">
+        <input class="top" name="name" type="username" placeholder="Username">
         <input class="middle" name="password" type="password" placeholder="Password">
         <button type="submit">Login</button>
     </form>
