@@ -7,7 +7,7 @@
 </head>
 <body>
     <div>
-        Your todos are: ${todos}
+        ${name} Your todos are: ${todos}
     </div>
 
 </body>

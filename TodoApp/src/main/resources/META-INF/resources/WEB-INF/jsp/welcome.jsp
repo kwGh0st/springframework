@@ -7,11 +7,9 @@
 </head>
 <body>
     <h1>
-        Welcome to my website!
+        Welcome ${name}!
     </h1>
 
-    <div>
-        Your name: ${name}
-    </div>
+        <div><a href="list-todos">Manage</a> your todos</div>
 </body>
 </html>
