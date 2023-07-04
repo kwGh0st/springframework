@@ -63,13 +63,18 @@ form {
 
 @media screen and (max-width: 600px) {
     form{
-      width: 25rem;
+      width: 20rem;
     }
   
   }
   
   @media screen and (max-width: 400px) {
     form{
-      width: 20rem;
+      width: 18rem;
     }
   }
+  @media screen and (max-width: 300px) {
+      form{
+        width: 11rem;
+      }
+    }
