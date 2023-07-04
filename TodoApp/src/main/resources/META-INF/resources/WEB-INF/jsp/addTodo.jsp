@@ -16,6 +16,7 @@
             <form:input type="text" path="description" placeholder="Description" required="required"/>
             <form:input type="hidden" path="id"/>
             <form:input type="hidden" path="done"/>
+            <form:errors type="text" path="description" cssClass="text-warning"/>
             <button type="submit" class="btn btn-success">Submit</button>
         </form:form>
     </div>
