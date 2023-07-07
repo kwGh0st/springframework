@@ -9,6 +9,7 @@
     <title>Create Todo</title>
 </head>
 <body>
+<%@ include file="common/navbar.jspf" %>
     <div class="container">
         <form:form method="post" modelAttribute="todo">
             <h4>
@@ -29,8 +30,8 @@
             <button type="submit" class="btn btn-success">Submit</button>
         </form:form>
     </div>
-        <script src="webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-        <script src="webjars/jquery/3.6.4/jquery.min.js"></script>
+        <%@ include file="common/footer.jspf" %>
+
         <script src="webjars/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
         <script type="text/javascript">
         	$('#targetDate').datepicker({

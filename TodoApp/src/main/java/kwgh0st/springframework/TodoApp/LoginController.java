@@ -1,4 +1,4 @@
-package kwgh0st.springframework.TodoApp.login;
+package kwgh0st.springframework.TodoApp;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -17,7 +17,7 @@ public class LoginController {
     }
 
     @RequestMapping(value = {"", "/","login"}, method = RequestMethod.POST)
-    public String welcomePage(@RequestParam String name, ModelMap model) {
+    public String showWelcomePage(@RequestParam String name, ModelMap model) {
         model.put("name", name);
 
         return "welcome";
