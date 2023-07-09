@@ -1,7 +1,10 @@
 package kwgh0st.springframework.restfulwebservices;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -23,7 +26,16 @@ public class UserResource {
     }
 
     @PostMapping(path = "/users")
-    public void createUser(@RequestBody User user) {
-        userDaoService.save(user);
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+
+        User savedUser = userDaoService.save(user);
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(savedUser.getId())
+                .toUri();
+
+        return ResponseEntity.created(location).build();
     }
 }
