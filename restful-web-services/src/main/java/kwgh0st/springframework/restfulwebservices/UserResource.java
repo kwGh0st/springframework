@@ -1,5 +1,6 @@
 package kwgh0st.springframework.restfulwebservices;
 
+import jakarta.validation.Valid;
 import kwgh0st.springframework.restfulwebservices.exception.UserNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +30,7 @@ public class UserResource {
     }
 
     @PostMapping(path = "/users")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
+    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
 
         User savedUser = userDaoService.save(user);
 
