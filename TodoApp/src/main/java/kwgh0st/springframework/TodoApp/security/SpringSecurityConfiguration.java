@@ -1,4 +1,4 @@
-package kwgh0st.springframework.TodoApp;
+package kwgh0st.springframework.TodoApp.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class SpringSecurityConfiguration {
 
     @Bean
     public InMemoryUserDetailsManager createUsersDetailsManager() {
-        UserDetails userDetails = createNewUser("Admin", "admin1234");
+        UserDetails userDetails = createNewUser("admin", "admin");
         return new InMemoryUserDetailsManager(userDetails);
     }
 

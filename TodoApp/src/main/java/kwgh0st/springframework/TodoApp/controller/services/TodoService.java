@@ -1,6 +1,7 @@
-package kwgh0st.springframework.TodoApp;
+package kwgh0st.springframework.TodoApp.controller.services;
 
 import jakarta.validation.Valid;
+import kwgh0st.springframework.TodoApp.model.Todo;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

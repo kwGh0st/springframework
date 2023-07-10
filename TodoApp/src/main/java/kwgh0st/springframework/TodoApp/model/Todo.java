@@ -1,4 +1,4 @@
-package kwgh0st.springframework.TodoApp;
+package kwgh0st.springframework.TodoApp.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
