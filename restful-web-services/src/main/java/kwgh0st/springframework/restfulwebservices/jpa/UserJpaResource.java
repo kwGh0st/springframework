@@ -1,6 +1,7 @@
 package kwgh0st.springframework.restfulwebservices.jpa;
 
 import jakarta.validation.Valid;
+import kwgh0st.springframework.restfulwebservices.Post;
 import kwgh0st.springframework.restfulwebservices.User;
 import kwgh0st.springframework.restfulwebservices.UserDaoService;
 import kwgh0st.springframework.restfulwebservices.exception.UserNotFoundException;
@@ -17,17 +18,23 @@ import java.util.Optional;
 @RestController
 public class UserJpaResource {
 
-    private final UserDaoService userDaoService;
     private final UserRepository repository;
 
-    public UserJpaResource(UserDaoService userDaoService, UserRepository repository) {
-        this.userDaoService = userDaoService;
+    public UserJpaResource(UserRepository repository) {
         this.repository = repository;
     }
 
     @GetMapping(path = "jpa/users")
     public List<User> retrieveAllUsers() {
         return repository.findAll();
+    }
+
+    @GetMapping(path = "jpa/users/{id}/posts")
+    public List<Post> retrievePostForUser(@PathVariable int id) throws UserNotFoundException {
+        Optional<User> user = repository.findById(id);
+        if (user.isEmpty()) throw new UserNotFoundException("id: " + id);
+
+        return user.get().getPosts();
     }
 
 //    @GetMapping(path = "/users/{id}")
